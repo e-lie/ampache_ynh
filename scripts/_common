@@ -36,7 +36,7 @@ ampache_ynh_preparenginx () {
 ampache_ynh_install () {
         ORIPATH=$(pwd)
 	cd $final_path
-	sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+	sudo php -r "copy('/tmp/composer-setup.php', 'composer-setup.php');"
 	sudo php composer-setup.php
 	sudo php composer.phar install --prefer-source --no-interaction
 	# Set permissions to ampache directory
